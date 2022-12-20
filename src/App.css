@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+/* Custom Css */
+.wrapper {
+  max-width: 1400px;
+  margin: 0px auto 0;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid__outer {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid__outer .grid__item {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid__outer .grid__item a {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 120px;
+  min-width: 200px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-in-out;
+}
+
+.grid__outer .grid__item a:hover {
+  background: #EF6920;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+}
+
+.book_page {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.add__book_box {
+  box-shadow: 4px 10px 20px -4px rgba(0, 0, 0, 0.1);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add__book_box input {
+  box-shadow: none;
+  outline: none;
+  border-bottom-width: 2px;
+}
+
+.add__book_box input:focus,
+.add__book_box input:active,
+.add__book_box input:focus-within {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #EF6920;
+}
+
+.add__book_button {
+  background: #EF6920;
+  border-radius: 5px;
+}
+
+.add__book_button:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.book_page__grid--item {
+  margin: 20px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+  min-width: 380px;
+  max-width: calc(100% / 3);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0px);
+}
+
+.book_page__grid--item:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-10px);
+}
+
+.book_page__button {
+  background: #EF6920;
+}
+
+.search__container {
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.search__container--input {
+  height: 50px;
+  outline: none;
+  box-shadow: none;
+  border-radius: 35px;
+  border-bottom-width: 2px;
+}
+
+.search__container--button {
+  background: #EF6920;
+  margin-left: 20px;
+  min-width: 100px;
+  border-radius: 35px;
+  height: 50px;
+}
+
+.search__container--button:focus,
+.search__container--button:focus-within,
+.search__container--button:visited,
+.search__container--button:active {
+  outline: none;
+  box-shadow: none;
+  border-bottom-color: #EF6920;
+}
+
+/* .search__outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+} */
+
+.bookModal_container--box {
+  width: 500px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.bookModal_container--head,
+.bookModal_container--body,
+.bookModal_container--footer {
+  padding: 20px;
+}
+
+.bookModal_container--head {
+  position: relative;
+}
+
+.bookModal_container--head button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 2rem;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+}
+
+.no-auth {
+  display: block;
+  text-align: center;
+  border: 1px solid deepskyblue;
+}
+
+.no-auth-link {
+  border: 1px solid blue;
+  background: chartreuse;
+}
+
+.header-nav-link {
+  left: 6%;
+  margin-top: 20px;
+  position: absolute;
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+.header-nav-link-logout {
+  margin-top: 23px;
+  position: absolute;
+  right: 5px;
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+.login-form {
+  margin-top: -250px;
+  border: 1px solid gray;
+  padding: 50px;
+  box-shadow: darkcyan;
+  box-shadow: 5px 10px #af8282;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
