@@ -4,6 +4,7 @@
   "description": "api's for react app",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kanak",
