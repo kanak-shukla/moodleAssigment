@@ -32,4 +32,8 @@ Protected Routes - Add Book, Update Book, View Book
           2. Run `npm start` to start the server.
           3. You will see `server is listening at port 5000` if server started successfully.
 
-`Note`:- Uploaded files are stored in the "uploadedFiles" folder in the backend root directory.
+### `Note for static data storage`:- 
+1. Uploaded files are stored in the "uploadedFiles" folder in the backend root directory.
+2. Since I am not using any database, So I have created one static file `data.js` in the backend root directory to manage the data.
+3. Once server is started you can perform Any user or book related operations like Register New User, Add New Book, Update the Book, and it will reflect in the UI,
+4. But once you stopped the server, you will be shown the default data whatever stored in the data.js file.
